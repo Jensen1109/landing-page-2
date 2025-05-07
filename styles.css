@@ -1,90 +1,310 @@
+/* Establece margen, relleno y box-sizing universal */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina rellenos por defecto */
+    box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
 }
+
+/* Estilo del cuerpo del documento */
+body{
+    background-color: #F0FFF0; /* Color de fondo verde muy claro */
+}
+
+/* Estilo de la barra de navegación */
 .navbar{
-    display: inline-block;
-    
+    display: inline-block; /* Se comporta como bloque en línea */
 }
+
+/* Imágenes dentro de la barra de navegación */
+.navbar img {
+    width: 20px; /* Ancho de imagen */
+    height: 15px; /* Altura de imagen */
+    margin-right: 10px; /* Separación a la derecha */
+}
+
+/* Enlaces dentro de la barra de navegación */
 .navbar a {
-    margin-right: 190px;
+    margin-right: 100px; /* Espacio entre enlaces */
 }
 
+/* Imágenes dentro de la barra lateral */
 .sidebar img {
-    display: block;
+    display: block; /* Las imágenes se muestran en bloque */
 }
 
+/* Estilo de la barra lateral */
 .sidebar{
-    display: inline-block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(121, 223, 155);
-    padding: 30px;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    display: inline-block; /* Se comporta como bloque en línea */
+    position: fixed; /* Se mantiene fija al desplazarse */
+    top: 0; /* Se posiciona desde la parte superior */
+    bottom: 0; /* Se extiende hasta abajo */
+    left: 0; /* Pegada al lado izquierdo */
+    background-color:#004f4f; /* Color de fondo verde azulado */
+    padding: 30px; /* Relleno interno */
+    justify-content: space-between; /* No tiene efecto sin flexbox */
+    align-items: center; /* No tiene efecto sin flexbox */
+    flex-direction: column; /* No tiene efecto sin flexbox */
 }
+
+/* Estilo del ícono de inicio */
 .home-icon{
-    margin-bottom: 700px;
-    width: 30px;
-    height: 30px;
+    margin-bottom: 300px; /* Gran margen inferior */
+    width: 30px; /* Ancho fijo */
+    height: 30px; /* Altura fija */
 }
 
+/* Imágenes de los íconos sociales */
 .social-icons img {
-    margin-top: 15px;
-    margin-bottom: 9px;
-    width: 30px;
-    height: 30px;
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 25px; /* Margen inferior */
+    width: 30px; /* Ancho de los íconos */
+    height: 30px; /* Altura de los íconos */
 }
 
+/* Contenedor principal del contenido */
 .content{
-    margin-left: 60px;
-    width: calc(100% - 60px);
-    background-color: #fff;
-    padding: 50px 70px 50px 130px;
-}
-/* .sidebar .social-icons{
-    display: inline-block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    background-color: green;
-} */
-.columa-izquierda{
-    position: relative;
-    padding: 15px;
-}
-.formulario{
-    width: 400px;
-    height: 400px;
-    background-color: #cacaca;
-    align-items:center;
+    margin-left: 60px; /* Deja espacio para la barra lateral */
+    width: calc(100% - 60px); /* Ancho adaptativo restando sidebar */
+    background-color:#F0FFF0 ; /* Color de fondo igual al body */
+    padding: 50px 70px 50px 130px; /* Relleno: arriba, derecha, abajo, izquierda */
 }
 
+/* Contenedor de la columna izquierda mal escrito */
+.columa-izquierda{
+    position: relative; /* Posición relativa para elementos internos */
+    padding:15px; /* Relleno interno */
+}
+
+/* Estilo general del formulario */
+.formulario{
+    width: 500px; /* Ancho del formulario */
+    height: 375px; /* Altura del formulario */
+    background-color:white; /* Fondo blanco */
+    align-items:center; /* No tiene efecto sin display:flex */
+}
+
+/* Contenedor principal que agrupa las columnas */
 main{
-    height: 78;
-    width: 162vh;
-    position: absolute;
-    margin-right: 190px;
-    margin-top: 50px;
-    box-shadow:  1px 2px 40px #cacaca;
+    height: 78px; /* Altura del main */
+    width: 162px; /* Ancho del main */
+    position: absolute; /* Posición absoluta */
+    margin-right: 190px; /* Margen derecho */
+    margin-top: 50px; /* Margen superior */
+    box-shadow:  1px 2px 40px #cacaca; /* Sombra sutil */
 }
+
+/* Estilo de la columna izquierda con imagen de fondo */
+.columna-izquierda{
+    background-image:  linear-gradient(45deg, rgba(5, 54, 83, 0.767) 0%,rgba(13, 92, 112, 0.555) 99%, rgba(16, 98, 146, 0.747) 100%),url(img/dentista.avif); /* Imagen con degradado */
+    background-size:cover; /* La imagen cubre toda el área */
+    background-position: center; /* Centrada */
+    background-repeat:no-repeat; /* No se repite */
+}
+
+/* Estilo adicional de la columna izquierda dentro del main */
 main .columna-izquierda{
-    margin: 0;
-    position: relative;
-    width: 800px;
-    height: 800px;
-    background-color: slateblue;
+    margin: 0; /* Sin margen externo */
+    padding-top: 100px; /* Espacio superior */
+    position: relative; /* Posición relativa */
+    width: 500px; /* Ancho */
+    height: 520px; /* Alto */
+    background-color: rgb(183, 236, 183); /* Color de fondo verde claro */
 }
+
+/* Título principal */
+.text h1 {
+    margin-left: 80px; /* Margen izquierdo */
+    margin-bottom: 10px; /* Margen inferior */
+    font-size: 25px; /* Tamaño de fuente */
+    color: white; /* Color blanco */
+}
+
+/* Segundo título */
+.titulo2{
+    margin-left: 80px; /* Margen izquierdo */
+    margin-bottom: 10px; /* Margen inferior */
+    font-size: 25px; /* Tamaño de letra */
+    color: white; /* Color blanco */
+}
+
+/* Título especial para dental */
+.dental{
+    margin-left: 80px; /* Margen izquierdo */
+    margin-bottom: 10px; /* Margen inferior */
+    font-size: 25px; /* Tamaño de letra */
+    color: #3CB371; /* Verde menta */
+}
+
+/* Párrafos dentro de la columna izquierda */
+.columna-izquierda p {
+    margin-left: 65px; /* Margen izquierdo */
+    padding: 15px; /* Relleno interno */
+    line-height: 25px; /* Altura de línea */
+    color: white; /* Color blanco */
+}
+
+/* Botón para reservar cita */
+.book-now1{
+    margin-left: 80px; /* Margen izquierdo */
+    width: 150px; /* Ancho */
+    height: 40px; /* Altura */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo mano */
+    background-color: #3CB371; /* Verde menta */
+    border: none; /* Sin borde */
+    text-align: center; /* Texto centrado */
+    font-size: 16px; /* Tamaño de letra */
+    font-weight: bold; /* Letra en negrita */
+    color: white; /* Texto blanco */
+}
+
+/* Ícono decorativo en botón reservar */
+.book-now1::after{
+    content: ""; /* Elemento decorativo */
+    display: inline-block; /* Bloque en línea */
+    width: 18px; /* Ancho del ícono */
+    height: 18px; /* Altura del ícono */
+    margin-left: 15px; /* Separación izquierda */
+    border-radius: 50%; /* Forma redonda */
+    margin-bottom: -3px; /* Ajuste de posición vertical */
+    background-image: url(img/play-button\ \(1\).png); /* Ícono tipo play */
+    background-size: contain; /* Se adapta sin recortar */
+}
+
+/* Botón para leer más */
+.read-more{
+    margin-left: 20px; /* Margen izquierdo */
+    width: 150px; /* Ancho */
+    height: 40px; /* Altura */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo mano */
+    border-color: #3CB371; /* Borde verde */
+    background-color: transparent; /* Fondo transparente */
+    font-weight: bold; /* Negrita */
+    font-size: 16px; /* Tamaño de letra */
+    text-align: center; /* Texto centrado */
+    color:#3CB371 ; /* Texto verde */
+}
+
+/* Ícono en botón leer más */
+.read-more::after{
+    content: ""; /* Elemento decorativo */
+    display: inline-block; /* Tipo bloque en línea */
+    width: 20px; /* Ancho */
+    height: 20px; /* Alto */
+    margin-left: 15px; /* Separación izquierda */
+    border-radius: 50%; /* Redondeado */
+    margin-bottom: -3px; /* Posición hacia abajo */
+    background-image: url(img/play-button.png); /* Ícono play */
+    background-size: contain; /* Ajuste al contenedor */
+}
+
+/* Contenedor de la columna derecha */
 main .columa-derecha{
-    margin: 0;
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    top: 0;
-    left: 800px;
-    background-color: rgb(70, 67, 90);
+    margin: 0; /* Sin margen */
+    position: absolute; /* Posición absoluta */
+    width: 500px; /* Ancho */
+    height: 520px; /* Alto */
+    top: 0; /* Desde arriba */
+    left: 500px; /* Separado 500px desde la izquierda */
+    background-color: rgb(70, 67, 90); /* Fondo gris oscuro */
+}
+
+/* Reasignación del color de fondo a blanco */
+main .columa-derecha{
+    background-color: white; /* Sobrescribe el anterior */
+}
+
+/* Título dentro de columna derecha */
+.titulo-derecha{
+    width: 50vh; /* Ancho relativo a la altura de la ventana */
+    text-align: center; /* Texto centrado */
+    margin-bottom: 37px; /* Margen inferior */
+    color: rgba(31, 169, 117, 255); /* Verde fuerte */
+    margin-top :20px; /* Margen superior */
+    margin-left: 70px; /* Margen izquierdo */
+    font-size: 25px; /* Tamaño de letra */
+}
+
+/* Fila del formulario */
+.fila{
+    width: 100%; /* Ancho completo */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Divisiones dentro de la fila */
+.fila > div {
+    float: left; /* Alineados a la izquierda */
+    width: 47%; /* Casi la mitad del ancho */
+    margin-right: 6%; /* Separación entre ellos */
+}
+
+/* El último div no debe tener margen derecho */
+.fila > div:last-child{
+    margin-right: 0; /* Sin margen */
+}
+
+/* Estilos para email y contacto */
+.div-email,
+.contacto{
+    width: 100%; /* Ancho completo */
+    margin-bottom: 5px; /* Margen inferior */
+    float: none; /* Sin flotación */
+    margin-left: 20px; /* Margen izquierdo */
+}
+
+/* Estilo a los inputs dentro de filas */
+.fila div input{
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilo de etiquetas en el formulario */
+.formulario label{
+    display: block; /* Tipo bloque */
+    color:  rgb(134, 123, 123); /* Gris */
+    margin-left: 15px; /* Margen izquierdo */
+    font-weight:normal; /* Peso normal */
+    margin-bottom: 5px; /* Margen inferior */
+    font-size: 16px; /* Tamaño de letra */
+}
+
+/* Campos de entrada del formulario */
+.formulario input{
+    width: 92%; /* Ancho relativo */
+    padding: 12px; /* Relleno interno */
+    border: none; /* Sin borde */
+    border-radius: 100px; /* Bordes redondos */
+    font-size: 15px; /* Tamaño de letra */
+    background-color: #f5f5f5; /* Gris claro */
+    box-sizing: border-box; /* Incluye borde y padding en el tamaño */
+}
+
+/* Botón de enviar formulario */
+.formulario button {
+    background-color: rgba(19, 126, 92, 0.938); /* Fondo verde oscuro */
+    margin-left: 150px; /* Margen izquierdo */
+    width: 150px; /* Ancho */
+    height: 40px; /* Altura */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo mano */
+    background-color: #3CB371; /* Sobrescribe con verde menta */
+    border: none; /* Sin borde */
+    text-align: center; /* Texto centrado */
+    font-size: 16px; /* Tamaño de letra */
+    font-weight: bold; /* Negrita */
+    color: white; /* Texto blanco */
+    margin-top: 10px; /* Margen superior */
+}
+
+/* Ícono dentro del botón */
+button::after{
+    content: ""; /* Elemento decorativo */
+    display: inline-block; /* Tipo bloque en línea */
+    width: 18px; /* Ancho del ícono */
+    height: 18px; /* Alto del ícono */
+    margin-left: 15px; /* Separación izquierda */
+    border-radius: 50%; /* Redondeado */
+    margin-bottom: -3px; /* Ajuste vertical */
+    background-image: url(img/play-button\ \(1\).png); /* Ícono play */
+    background-size: contain; /* Escalado automático */
 }
