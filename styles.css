@@ -1,3 +1,4 @@
+
 /* Establece margen, relleno y box-sizing universal */
 *{
     margin: 0; /* Elimina márgenes por defecto */
@@ -25,6 +26,11 @@ body{
 /* Enlaces dentro de la barra de navegación */
 .navbar a {
     margin-right: 100px; /* Espacio entre enlaces */
+    text-decoration: none;  /* Se quito la decoracion del texyo */
+    color:black;
+} 
+.navbar .numero-celular{
+    color: green;  /* Se le dio color al texto */
 }
 
 /* Imágenes dentro de la barra lateral */
